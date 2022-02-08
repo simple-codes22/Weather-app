@@ -12,13 +12,13 @@
         <div class="current" id="currentWeather">
             <div id="description-main">
                 <div id="condition-holder-main">
-                    <img src="{% static 'Utils/Sunny with cloud.svg' %}" class="weather-image-main" alt="Weather Condition" />
+                    <img src="{{today_image}}" class="weather-image-main" alt="Weather Condition" />
                     <div id="degrees-main">
                         {{current.temp_c}}&deg;C | {{current.temp_f}}&deg;F
                     </div>
                 </div>
                 <div id="condition-container">
-                    <div class="condition">
+                    <div class="condition-main">
                         {{current.condition.text}}
                     </div>
                     <div class="day">
@@ -31,10 +31,12 @@
             </div>
         </div>
         <div class="forecast" id="'forecast">
-            {% for days in forecast.forecastday%}
+            
+            {% for days in forecast.forecastday %}
                 <div id="description">
                     <div id="condition-holder">
-                        <img src="{% static 'Utils/Sunny with cloud.svg' %}" alt="Weather Condition" />
+                        
+                        <img src="{% cycle forecast_image.0 forecast_image.1 forecast_image.2 as condition_img %}" alt="Weather Condition" />
                         <div id="degrees">
                             {{days.day.avgtemp_c}}&deg;C | {{days.day.avgtemp_f}}&deg;F
                         </div>

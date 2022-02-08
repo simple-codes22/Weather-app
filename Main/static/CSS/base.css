@@ -5,13 +5,19 @@
 }
 #curtain {
     background: rgba(0, 0, 0, 0.466);
+    position: fixed;
+    left: 0;
+    right:0;
+    bottom: 0;
+    top:0;
+    z-index: -10000;
 }
 
 #navBar h4 {
     color: rgba(255, 255, 255, 0.932);
     letter-spacing: .4px;
     padding: 10px;
-    animation: intro 3s ease-in 1;
+    animation: intro 1s ease-in;
 }
 
 main.main#main { /* Just trying to have some fun here */
@@ -89,7 +95,7 @@ div.current#currentWeather {
     align-items: center;
     flex-direction: column;
 }
-div.condition {
+div.condition-main {
     font-size: 50px;
     letter-spacing: .3px;
     margin: 20px;
