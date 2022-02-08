@@ -1,0 +1,168 @@
+#container {
+    background: url('../Images/Background\ 1.jpg') fixed center no-repeat;
+    z-index: -1000;
+    background-size: cover;
+}
+#curtain {
+    background: rgba(0, 0, 0, 0.466);
+}
+
+#navBar h4 {
+    color: rgba(255, 255, 255, 0.932);
+    letter-spacing: .4px;
+    padding: 10px;
+    animation: intro 3s ease-in 1;
+}
+
+main.main#main { /* Just trying to have some fun here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#search {
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input#search-input {
+    outline: 0;
+    border-radius: 0;
+    border: 3px solid rgb(180, 180, 180);
+    border-right: 0;
+    height: 50px;
+    width: 360px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#submit-btn {
+    height: 50px;
+    border-radius: 0;
+}
+#display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+div.current#currentWeather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#description-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#condition-holder-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+    position: relative;
+}
+#condition-holder-main img {
+    width: 250px;
+    height: 250px;
+}
+#degrees-main {
+    font-size: 18px;
+    letter-spacing: .2px;
+    color: rgba(255, 255, 255, 0.973)
+}
+#condition-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+div.condition {
+    font-size: 50px;
+    letter-spacing: .3px;
+    margin: 20px;
+    color: rgba(255, 255, 255, 0.911)
+}
+.day {
+    color: rgba(255, 255, 255, 0.877);
+    font-size: 21px;
+    letter-spacing: .5px;
+}
+div#location {
+    font-size: 18px;
+    margin: 10px;
+    letter-spacing: .3px;
+    color: rgba(255, 255, 255, 0.89);
+}
+
+.forecast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+#condition-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#condition-holder img {
+    width: 120px;
+    height: 120px;
+}
+#degrees {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.904);
+    margin: 5px;
+}
+#date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.74)
+}
+#stat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#fact {
+    margin: 3px;
+    font-size: 16px;
+    letter-spacing: .2px;
+    color: white;
+}
+#probability {
+    color: rgba(255, 255, 255, 0.733);
+
+    text-align: center;
+}
+
+
+@keyframes intro {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

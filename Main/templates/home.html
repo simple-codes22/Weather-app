@@ -1,8 +1,62 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block main %}
     <div id='search'>
         <form action="" method="post">
-            <input type="text" name="geolocation" placeholder="Search Geolocation ...">
+            {% csrf_token %}
+            <input type="text" name="geolocation" id="search-input" placeholder="Check the weather of a city">
+            <button type="submit" id="submit-btn" class="btn btn-primary">Search</button>
         </form>
+    </div>
+    <div id="display">
+        <div class="current" id="currentWeather">
+            <div id="description-main">
+                <div id="condition-holder-main">
+                    <img src="{% static 'Utils/Sunny with cloud.svg' %}" class="weather-image-main" alt="Weather Condition" />
+                    <div id="degrees-main">
+                        {{current.temp_c}}&deg;C | {{current.temp_f}}&deg;F
+                    </div>
+                </div>
+                <div id="condition-container">
+                    <div class="condition">
+                        {{current.condition.text}}
+                    </div>
+                    <div class="day">
+                        Today
+                    </div>
+                </div>
+            </div>
+            <div id="location">
+                {{location.region}}, {{location.country}}
+            </div>
+        </div>
+        <div class="forecast" id="'forecast">
+            {% for days in forecast.forecastday%}
+                <div id="description">
+                    <div id="condition-holder">
+                        <img src="{% static 'Utils/Sunny with cloud.svg' %}" alt="Weather Condition" />
+                        <div id="degrees">
+                            {{days.day.avgtemp_c}}&deg;C | {{days.day.avgtemp_f}}&deg;F
+                        </div>
+                    </div>
+                    <div id="date">
+                        {{days.date}}
+                    </div>
+                    <div id="stat">
+                        <div id="fact">
+                            {{days.day.condition.text}}
+                        </div>
+                        <div id="probability">
+                            {% if days.day.daily_chance_of_rain > 0 %}
+                                    It might rain on this day
+                            {% else %}
+                                It might not rain on this day
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <!-- A for loop will be done here for the next five days forecast -->
+        </div>
     </div>
 {% endblock %}
