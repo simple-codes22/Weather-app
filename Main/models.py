@@ -63,6 +63,7 @@ condition_image = {
     "Ice pellets": "Utils/Snowy.svg",
     "Light rain shower": "Utils/Cloudy Day.svg",
     "Moderate or heavy rain shower": "Utils/Rainy 2.svg",
+    "Moderate or heavy snow shower": "Utils/Smowy.svg",
     "Torrential rain shower": "Utils/Rainy 2.svg",
     "Light sleet shower": "Utils/Snowy.svg",
     "Moderate or heavy sleet shower": "Utils/Snowy.svg",
