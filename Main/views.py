@@ -22,4 +22,4 @@ def main(request="GET", current_location=MY_WEATHER.get_forecast('Lagos'), *args
         'forecast_image': condition_forecast_src,
     }
     return render(request, 'home.html', context)
-# Create your views here.
+
